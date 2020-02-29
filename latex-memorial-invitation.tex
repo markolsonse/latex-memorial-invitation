@@ -1,0 +1,77 @@
+%================================================
+%==================THE PREAMBLE==================
+%================================================
+%  Template created by MarkOlsonSE
+% 
+%  Uses 
+%================================================
+\documentclass[20pt]{article}
+
+% > > > Custom Packages
+\usepackage[utf8]{inputenc}
+\usepackage[paperheight=142mm,paperwidth=120mm,top=.3in,bottom=.0in,right=0.25in,left=0.25in,heightrounded]{geometry}
+\usepackage[object=vectorian]{pgfornament}
+\usetikzlibrary{shapes.geometric,calc}
+\usepackage{xcolor}
+\usepackage{anyfontsize}
+\usepackage[object=vectorian]{pgfornament}
+\usetikzlibrary{shapes.geometric,calc}
+\usepackage{pagecolor}
+
+% > > > LaTeX Fonts
+\usepackage{calligra}
+\usepackage{miama}
+\usepackage{libertine}
+\usepackage[T1]{fontenc}
+
+% > > > Hide the page numbers
+\pagenumbering{gobble} 
+
+% > > > Define colors
+
+\definecolor{text}{HTML}{262D3B}
+\color{text}
+\definecolor{dblue}{RGB}{0, 0, 128}
+\definecolor{bgc}{HTML}{EDEDED}
+% ALTERNATIVE BACKGROUND
+%\definecolor{bgc}{RGB}{240,234,214}
+
+
+%================================================
+%==================THE DOCUMENT==================
+%================================================
+
+\begin{document}
+\pagecolor{bgc}
+\begin{center}
+	\begin{tikzpicture}[every node/.style={inner sep=0pt}] \node[text width=8cm,align=center](Text){%
+	{\fontsize{40}{60}\selectfont \fmmfamily{\phantom{o}}}\\
+	{\fontsize{30}{60}\selectfont \fmmfamily{Invitation to the memorial of}}\\
+	\vspace{0.5cm}
+	{\fontsize{32}{60}\selectfont \calligra{Fisrt LastName}}\\
+	\vspace{0.5cm}
+	\begin{center}
+	\pgfornament[width = 6cm,
+	             color = dblue]{85}
+	\end{center}
+	\vspace{0.5cm}
+	{\fontsize{30}{60}\selectfont \fmmfamily{saturday 29/2 at 14:00}}\\
+	\vspace{0.5cm}
+	{\fontsize{15}{60}\selectfont \fmmfamily{The VenueWithMaybeALongerName on Streetname 142 \newline (entrance at the back)}}\\
+	\vspace{0.4cm}
+	{\fontsize{15}{60}\selectfont \fmmfamily{dark clothing}}\\
+	\vspace{0.4cm}
+	{\fontsize{15}{60}\selectfont \fmmfamily{refreshments served directly afterwords}}\\
+	\vspace{0.4cm}
+	{\fontsize{15}{60}\selectfont \fmmfamily{rsvp by Thursday to the organization rsvp@emailaddress.se  tel \#\#-\#\#\# \#\#\# \#\# }}\\
+	
+	} ; \node[shift={(-1cm,1cm)},anchor=north west, color=dblue](CNW)
+	at (Text.north west) {\pgfornament[width=1.75cm]{37}}; \node[shift={(1cm,1cm)},anchor=north east, color=dblue](CNE)
+	at (Text.north east) {\pgfornament[width=1.75cm,symmetry=v,color=dblue]{37}}; \node[shift={(-1cm,-1cm)},anchor=south west, color=dblue](CSW)
+	at (Text.south west) {\pgfornament[width=1.75cm,symmetry=h,color=dblue]{37}}; \node[shift={(1cm,-1cm)},anchor=south east, color=dblue](CSE)
+	at (Text.south east) {\pgfornament[width=1.75cm,symmetry=c,color=dblue]{37}}; %\pgfornamenthline{CNW}{CNE}{north}{85} \pgfornamenthline{CSW}{CSE}{south}{85} \pgfornamentvline{CNW}{CSW}{west}{85} \pgfornamentvline{CNE}{CSE}{east}{85}
+	\end{tikzpicture}
+
+\end{center}
+
+\end{document}
